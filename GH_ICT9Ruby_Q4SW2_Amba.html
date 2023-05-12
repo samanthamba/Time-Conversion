@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Converter</title>
+</head>
+<body bgcolor="#FFF3C4">
+<center>
+<table cellpadding="10">
+	<tr>
+		<td colspan="4"><center><img src="https://freepngimg.com/thumb/clock/58348-alarm-icon-cartoon-timer-clock-free-photo-png.png" height="300"></center></td>
+	</tr>
+	<tr>
+		<td colspan="4"><center><h1 style="color:orange;font-family: Arial;">Time Converter</h1></center></td>
+	</tr>
+	<tr bgcolor="#FFA86B">
+		<td>
+			<center>
+				<input type="text" id="1" placeholder="Input Seconds">
+			</center>
+		</td>	
+		<td>
+			<center>
+				<input type="text" id="2" placeholder="Input Minutes">	
+		</td>
+		<td>
+			<center>
+				<input type="text" id="3" placeholder="Input Hours">
+		</td>		
+		<td>
+			<center>
+				<input type="text" id="4" placeholder="Input Days">
+			</center>
+		</td>		
+	</tr>
+	<tr>
+		<td bgcolor="#F6893D">
+			<center><p id="seconds"></p></center>
+	<center>		
+			<input type="submit" value="Minutes" onclick="secondsToMinutes()">
+				<input type="submit" value="Hours" onclick="secondsToHours()">
+				<input type="submit" value="Days" onclick="secondsToDays()">
+				<script>
+					function secondsToMinutes() {
+						var smins1 = document.getElementById('1').value;
+						var smins2 = smins1 / 60;
+						document.getElementById('seconds').innerHTML = smins2 + " minute/s";
+					}
+					function secondsToHours() {
+						var shrs1 = document.getElementById('1').value;
+						var shrs2 = shrs1 / 3600;
+						document.getElementById('seconds').innerHTML = shrs2 + " hour/s";
+					}
+					function secondsToDays() {
+						var sdays1 = document.getElementById('1').value;
+						var sdays2 = sdays1 / 86400;
+						document.getElementById('seconds').innerHTML = sdays2 + " day/s";
+					}
+		</script>
+	</center>
+		</td>
+		<td bgcolor="#F6893D">
+			<center><p id="minutes"></p></center>
+		<center>	
+			<input type="submit" value="Seconds" onclick="minutesToSeconds()">
+				<input type="submit" value="Hours" onclick="minutesToHours()">
+				<input type="submit" value="Days" onclick="minutesToDays()">
+				<script>
+					function minutesToSeconds() {
+						var secs1 = document.getElementById('2').value;
+						var secs2 = secs1 * 60;
+						document.getElementById('minutes').innerHTML = secs2 + " second/s";
+					}
+					function minutesToHours() {
+						var hrs1 = document.getElementById('2').value;
+						var hrs2 = hrs1 / 60;
+						document.getElementById('minutes').innerHTML = hrs2 + " hour/s";
+					}
+					function minutesToDays() {
+						var days1 = document.getElementById('2').value;
+						var days2 = days1 / 1440;
+						document.getElementById('minutes').innerHTML = days2 + " day/s";
+					}
+	</script>
+			</center>
+		</td>
+		<td bgcolor="#F6893D">
+			<center><p id="hours"></p></center>
+		<center>
+			<input type="submit" value="Seconds" onclick="hoursToSeconds()">
+				<input type="submit" value="Minutes" onclick="hoursToMinutes()">
+				<input type="submit" value="Days" onclick="hoursToDays()">
+				<script>
+					function hoursToSeconds() {
+						var hsecs1 = document.getElementById('3').value;
+						var hsecs2 = hsecs1 * 3600;
+						document.getElementById('hours').innerHTML = hsecs2 + " second/s";
+					}
+					function hoursToMinutes() {
+						var hmins1 = document.getElementById('3').value;
+						var hmins2 = hmins1 * 60;
+						document.getElementById('hours').innerHTML = hmins2 + " minute/s";
+					}
+					function hoursToDays() {
+						var hdays1 = document.getElementById('3').value;
+						var hdays2 = hdays1 / 24;
+						document.getElementById('hours').innerHTML = hdays2 + " day/s";
+					}
+	</script>
+		</center>
+		</td>
+		<td bgcolor="#F6893D">
+			<center><p id="days"></p></center>
+			<center>
+				<input type="submit" value="Seconds" onclick="daysToSeconds()">
+				<input type="submit" value="Minutes" onclick="daysToMinutes()">
+				<input type="submit" value="Hours" onclick="daysToHours()">
+				<script>
+					function daysToSeconds() {
+						var dsecs1 = document.getElementById('4').value;
+						var dsecs2 = dsecs1 * 86400;
+						document.getElementById('days').innerHTML = dsecs2 + " second/s";
+					}
+					function daysToMinutes() {
+						var dmins1 = document.getElementById('4').value;
+						var dmins2 = dmins1 * 1440;
+						document.getElementById('days').innerHTML = dmins2 + " minute/s";
+					}
+					function daysToHours() {
+						var dhrs1 = document.getElementById('4').value;
+						var dhrs2 = dhrs1 * 24;
+						document.getElementById('days').innerHTML = dhrs2 + " hour/s";
+					}
+	</script>
+			</center>
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+</html>
